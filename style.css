@@ -1,0 +1,88 @@
+body {
+    font-family: Helvetica, Arial, Sans-serif;
+    color: #080930;
+}
+
+h1 {
+    text-align: center;
+}
+
+.carousal-wrapper {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.carousal-wrapper .carousal-item {
+    position: absolute;
+    width: 100%;
+    height: 310px;
+    text-align: center;
+    margin: 10px auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    background-color: #c1c1c1;
+}
+
+.carousal-wrapper .carousal-item img {
+    margin-top: 10px;
+    height: 230px;
+    width: 240px;
+}
+
+.carousal-wrapper .carousal-item .nav-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 250px;
+    left: 0;
+}
+
+.carousal-wrapper .carousal-item .nav-wrapper .nav {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 20px 5px 0 5px;
+    display: inline-block;
+    background-color: #fff;
+    opacity: 0.5;
+}
+
+.carousal-wrapper .carousal-item .nav-wrapper .nav:active {
+    opacity: 1;
+}
+
+.carousal-wrapper [id^=target-item] {
+    display: none;
+}
+
+.carousal-wrapper.item-blue {
+    background: #4646A9;
+    color: #fff;
+}
+
+.carousal-wrapper .item-pink {
+    background: #FA2449;
+    color: #fff;
+}
+
+.carousal-wrapper .item-green {
+    background: #179781;
+    color: #fff;
+}
+
+.carousal-wrapper .item-1 {
+    z-index: 1;
+}
+
+.carousal-wrapper #target-item-1:target~.item-1 {
+    z-index: 3;
+}
+
+.carousal-wrapper #target-item-2:target~.item-2 {
+    z-index: 3;
+}
+
+.carousal-wrapper #target-item-3:target~.item-3 {
+    z-index: 3;
+}
